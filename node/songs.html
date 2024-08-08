@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Songs Taught - Carnatic Music Classes</title>
+<style>
+    /* Reset styles */
+    body, h1, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    /* Header styles */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Navigation styles */
+    nav {
+        background-color: #444;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Main content styles */
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Level card styles */
+    .level-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s;
+        
+    }
+
+    .level-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .level-description {
+        display: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+        .level-description.show {
+            display: block;
+        }
+</style>
+</head>
+<body>
+<header>
+    <h1>Songs Taught</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#">Carnatic Music</a></li>
+        <li><a href="final.html">Home</a></li>
+        <li><a href="Level.html">Levels</a></li>
+        <li><a href="#songs.html">Songs Taught</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="level-card" id="level1">
+        <h2>Level 1 Songs</h2>
+        <div class="level-description">
+            <p>Songs taught at Level 1. This is the beginner level.</p>
+        </div>
+    </div>
+    <div class="level-card" id="level2">
+        <h2>Level 2 Songs</h2>
+        <div class="level-description">
+            <p>Songs taught at Level 2. This is the intermediate level.</p>
+        </div>
+    </div>
+    <div class="level-card" id="level3">
+        <h2>Level 3 Songs</h2>
+        <div class="level-description">
+            <p>Songs taught at Level 3. This is the advanced level.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('level1').addEventListener('click', function() {
+        hideAllDescriptions();
+        document.querySelector('#level1 .level-description').classList.add('show');
+    });
+
+    document.getElementById('level2').addEventListener('click', function() {
+        hideAllDescriptions();
+        document.querySelector('#level2 .level-description').classList.add('show');
+    });
+
+    document.getElementById('level3').addEventListener('click', function() {
+        hideAllDescriptions();
+        document.querySelector('#level3 .level-description').classList.add('show');
+    });
+
+    function hideAllDescriptions() {
+        document.querySelectorAll('.level-description').forEach(function(desc) {
+            desc.classList.remove('show');
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: gainsboro;
+        color: black;
+        margin: auto;
+        padding:20px;
+    }
+
+    h2{
+        text-align: center;
+        color: black;
+    }
+
+    ul{
+        list-style-type: none;
+        width: 600px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background-color: white;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    li{
+        border-bottom: 1px solid gainsboro;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+
+    li:last-child{
+        border-bottom: none;
+    }
+
+    li:hover{
+        background-color: gainsboro;
+
+    }
+
+    .user-info{
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+    <h2>USER DATA LIST</h2>
+
+    <ul id="userDataList"></ul>
+
+    <script>
+        //retuive the data from local stroage
+        let userData=JSON.parse(localStorage.getItem('userData')) || [];
+
+        //display the user data
+        let userDataList=document.getElementById('userDataList');
+
+        userData.forEach(user=>{
+            let listItem=document.createElement('li');
+
+            let firstnamediv=document.createElement('div');
+            firstnamediv.className= 'user-info';
+            firstnamediv.textContent=`firstname:${user.firstname}`;
+            listItem.appendChild(firstnamediv);
+            
+            let lastnamediv=document.createElement('div');
+            lastnamediv.className= 'user-info';
+            lastnamediv.textContent=`lastname:${user.lastname}`;
+            listItem.appendChild(lastnamediv);
+            
+            let rolnodiv=document.createElement('div');
+            rolnodiv.className= 'user-info';
+            rolnodiv.textContent=`rollno:${user.rollno}`;
+            listItem.appendChild(rolnodiv);
+
+            let emaildiv=document.createElement('div');
+            emaildiv.className= 'user-info';
+            emaildiv.textContent=`email:${user.email}`;
+            listItem.appendChild(emaildiv);
+            
+
+
+
+
+
+
+
+
+
+
+
+            userDataList.appendChild(listItem);
+        })
+    </script>
+</body>
+</html>

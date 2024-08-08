@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+table 
+    { 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+    }
+    table, th, td 
+    { 
+    border: 1px solid black; 
+    padding: 10px; 
+    }
+</style>
+</head>
+<body>
+    <label for="table1">Table 1</label>
+<input id="table1" type="text" placeholder="Enter the value like 3#3#3">
+<label for="table2">Table 2</label>
+<input id="table2" type="text" placeholder="Enter the value like 3#3#3">
+
+
+    <button onclick="gtables()">Result</button>
+
+    <div class="tables">
+
+    </div>
+
+
+    <script>
+       function gtables()
+       {
+         //retrive the input Vlaues
+         var input1=document.getElementById('table1').value;
+         var input2=document.getElementById('table2').value;
+
+        //retirve the table conatiner 
+        var tablediv=document.querySelector('.tables');
+
+        //Create an array
+        var tables=[];
+
+       tables.push(createTable(input1));
+       tables.push(createTable(input2));
+
+        //for table 3
+
+        var table3 = tables[0].map((row, rowIndex) => row.map((_, colIndex) => tables[0][rowIndex][colIndex] * tables[1][rowIndex][colIndex]));
+
+        tablediv.innerHTML=" ";
+        tables.forEach(table=>tablediv.appendChild(createHtmlTable(table)));
+        tablediv.appendChild(createHtmlTable(table3));
+
+       }
+
+        function createTable(input)
+        {
+            var [rows,cols,startNum]=input.split("#").map(Number);
+            var table=[];
+            var num=startNum;
+
+            for(var i=0;i<rows;i++)
+            {
+                table[i]=[];
+                for(var j=0;j<cols;j++)
+                {
+                    table[i][j]=num++;
+                }
+            }
+
+            return table;
+        }
+
+        function createHtmlTable(tableData)
+        {
+            var table=document.createElement('table');
+            tableData.forEach(rowData=>{
+                var row=table.insertRow();
+                rowData.forEach(cellData=>{
+                    var cell=row.insertCell();
+                    cell.innerHTML=cellData;
+                });
+            });
+            return table;
+        }
+        
+    </script>
+</body>
+</html>

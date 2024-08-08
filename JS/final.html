@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    form{
+        width: 300px;
+        padding: 20px;
+        margin: 0px auto;
+        border: 2px solid greenyellow;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+
+    }
+    label{
+        display: block;
+        margin: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]{
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    button{
+        background-color: lightblue;
+        color: black;
+        text-align: center;
+        align-items: center;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+
+    }
+    button:hover{
+        background-color: white;
+        color: red;
+    }
+
+</style>
+</head>
+<body>
+    <form id="rform">
+
+        <label for="firstname">First Name</label>
+        <input type="text" placeholder="Enter your first name" id="firstname" required>
+        <label for="lastname">Last Name</label>
+        <input type="text" placeholder="Enter your last name" id="lastname" required>
+        <label for="rollno">Roll no</label>
+        <input type="tel" placeholder="Enter your roll no" id="rollno" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your Email" id="email" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        //lets take an array
+        let userData=[];
+
+        //initailize an fucnction
+
+        function handelSubmit(event){
+            event.preventDefault();
+
+            //inputt taken from the user 
+            let firstname=document.getElementById('firstname').value;
+            let lastname=document.getElementById('lastname').value;
+            let rollno=document.getElementById('rollno').value;
+            let email=document.getElementById('email').value;
+
+            //storing it into the objects
+
+            let user={
+                firstname:firstname,
+                lastname:lastname,
+                rollno:rollno,
+                email:email
+            }
+
+        //push into the localstoreadge
+
+        userData.push(user);
+
+        //store into the localstorage
+            localStorage.setItem('userData',JSON.stringify(userData));
+
+        //redirect to the new page
+
+        window.location.href="form2.html";
+
+        }
+
+        document.getElementById('rform').addEventListener('submit',handelSubmit)
+    </script>
+    
+</body>
+</html>

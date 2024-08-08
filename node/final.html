@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body{
+    background-color: gainsboro;
+    font-family:Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+ header{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+
+ }
+
+ h1,h3{
+    font-family: 'Lucida Handwriting', cursive;
+ }
+nav{
+    background-color: black;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    display:inline;
+    margin-right: 50px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color:greenyellow;
+    padding: 10px 10px;
+
+}
+
+.image-overlay {
+    position:fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 20% opacity */
+    padding: 20px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: opacity 0.3s;
+    color: black; /* Ensures text is clearly visible */
+}
+
+
+.image-container:hover .image-overlay{
+    opacity: 1;
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Spardha School of Music</h1>
+    </header>
+
+<nav>
+    <ul>
+        <li><a href="#Home.html">Home</a></li>
+        <li><a href="Level.html">Levels</a></li>
+        <li><a href="#Songs.html">Songs</a></li>
+        <li><a href="#Conatct.html">Conatact Us</a></li>
+    </ul>
+</nav>
+
+<div class="image-container">
+    <img src="music.jpg" height="100%" width="100%">
+
+    <div class="image-overlay">
+        <h3>hii welcome to the Carnatic world of music the old traditional way of singing to reach your soul  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nobis eius blanditiis repellat vero esse, soluta inventore exercitationem ratione at accusamus pariatur quo illo veritatis perspiciatis tempora accusantium labore. Aperiam!
+        Modi recusandae nihil error exercitationem accusamus ab voluptatibus vitae, quis magni quidem velit officiis assumenda quam sapiente est ducimus voluptatum consequatur ea delectus voluptate deleniti maxime. Aperiam vero eos tenetur!</h3>
+    </div>
+</div>
+</body>
+</html>
+
+//const express=require('express');
+const app=express();
+
+app.use(express.static('public'))
+
+app.listen(8000,()=>{
+    console.log("Server is started");
+})

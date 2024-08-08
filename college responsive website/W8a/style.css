@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+
+.row {
+  margin-bottom: 20px;
+}
+
+.temp{
+  background: rgb(243, 238, 238);
+}

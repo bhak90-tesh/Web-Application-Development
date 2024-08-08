@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>     
+    
+    
+<style>
+
+.card{
+width: calc(30.33% - 10px);
+margin: 10px;
+padding: 10px;
+border: 1px solid blue;
+border-radius: 5px;
+text-align: center;
+cursor: pointer;
+display: inline-block;
+ }
+
+.card:hover{
+background-color: blueviolet;
+}
+    </style>
+</head>
+<body>
+    <div data-role="header">
+        <h1>Courses</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h1>Introduction to Coureses . Explore our Institurte Cousreses beloow :</h1>
+
+        <div class="card" id="itcard">
+            <h3>Information Techmology</h3>
+            <p>Click here to view the faculties</p>
+        </div>
+
+        <div class="card" id="entccard">
+            <h3>Electronics adn telecommnuicatoion </h3>
+            <p>Click here to view the faculties</p>
+        </div>
+
+        <div class="card" id="compcard">
+            <h3>Computer Engineering</h3>
+            <p>Click here to view the faculties</p>
+        </div>
+
+        <div id="staffmember" style="display: none;">
+            <h2>Staff Members List </h2>
+
+        <div id="itstaff" style="display: none;">
+            <h2>information technology staff Mmemgers</h2>
+
+            <ul>
+                <li>Rachna Karnavat</li>
+                <li>Deepali Salapurkar</li>
+                <li>Sachin Pande</li>
+                <li>Ravindra Murumkar</li>
+                <li>Shaym deshmukh</li>
+                <li>Prajakta Shinde</li>
+                <li>hrushikesh Joshi</li>
+                <li>Archana kadam</li>
+                <li>Summetra Jakhete</li>
+            </ul>
+           
+        </div>
+
+        <div id="entcstaff" style="display: none;">
+            <h2>ENTC Staff Memebrs</h2>
+            <ul>
+                <li>Rachna Karnavat</li>
+                <li>Deepali Salapurkar</li>
+                <li>Sachin Pande</li>
+                <li>Ravindra Murumkar</li>
+                <li>Shaym deshmukh</li>
+                <li>Prajakta Shinde</li>
+                <li>hrushikesh Joshi</li>
+                <li>Archana kadam</li>
+                <li>Summetra Jakhete</li>
+            </ul>
+        </div>
+
+        <div id="compstaff" style="display: none;">
+            <h2>Computer Engineering ataff</h2>
+            <ul>
+                <li>Rachna Karnavat</li>
+                <li>Deepali Salapurkar</li>
+                <li>Sachin Pande</li>
+                <li>Ravindra Murumkar</li>
+                <li>Shaym deshmukh</li>
+                <li>Prajakta Shinde</li>
+                <li>hrushikesh Joshi</li>
+                <li>Archana kadam</li>
+                <li>Summetra Jakhete</li>
+            </ul>
+        </div>
+        </div>
+    
+
+    <div data-role="footer">
+        <h1>PICT Pune @2024</h1>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#itcard").click(function(){
+            $("#staffmember").show(); 
+            $("#itstaff").show();   
+            $("#entcstaff").hide(); 
+            $("#compstaff").hide(); 
+        });
+
+        $("#entccard").click(function(){
+            $("#staffmember").show(); 
+            $("#itstaff").hide();   
+            $("#entcstaff").show(); 
+            $("#compstaff").hide();
+        });
+
+        $("#compcard").click(function(){
+            $("#staffmember").show(); 
+            $("#itstaff").hide();   
+            $("#entcstaff").hide(); 
+            $("#compstaff").show();
+        });
+
+
+    });
+</script>
+</body>
+</html>
