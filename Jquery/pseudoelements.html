@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></script>
+</head>
+<body>
+
+    <ul>
+        <li>onetwo</li>
+        <li>
+            three four
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            hii
+            
+        </li>
+        <li>you</li>
+        <li>
+            hello
+        </li>
+        <li>you</li>
+        <li>
+             wow
+        </li>
+        <li>myh</li>
+    </ul>
+
+    <a href="#" target="_blank">My link</a>
+    
+    <script>
+        $(document).ready(function()
+        {
+            $('ul li:first').css("background-color","red");
+        });
+
+        $(document).ready(function()
+        {
+            $("ul li:first-child").css("background-color","blue");
+        });
+
+        $(document).ready(function()
+        {
+            $("a[target]").css("text-decoration","line-through");
+        });
+
+        $(document).ready(function()
+        {
+            $("a[target=_blank]").css("text-decoration","line-through");
+        });
+    </script>
+</body>
+</html>

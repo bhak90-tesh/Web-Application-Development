@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="k1">
+        <h1>Heelo this is ashutosh</h1>
+    </div>
+
+    <div class="l1">
+        <h1>r u eligible for internship</h1>
+        <input type="radio" name="lang" id="y">Y
+        <input type="radio" name="lang" id="n">N
+    
+    </div>
+
+    <div class="l3">
+        <h1>Select your gender</h1>
+        <input type="button" class="yes" value="YEs">
+        <input type="button" class="no" value="No">
+        <input type="button" class="reset" value="Reset">
+    
+    </div>
+
+    <script>
+        $(document).ready(function()
+        {
+            $(".yes").click(function()
+            {
+                $("#yes").prop("checked",true);
+            });
+        });
+
+        $(document).ready(function()
+        {
+            $(".no").click(function()
+            {
+                $("#no").prop("checked",true);
+            });
+        });
+
+        $(document).ready(function()
+        {
+            $(".reset").click(function()
+            {
+                $("#yes").prop("checked",false);
+                $("#no").prop("checked",false);
+            });
+        });
+    </script>
+</body>
+</html>

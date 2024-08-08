@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const letters=new Set(["ashutohs","vedika","aditi","hiteshri"]);
+     
+        document.write(letters.values()+"<br>"); //returns the total object iterator
+
+        document.write(letters.size+"<br>");//retunds the size 
+
+        document.write(letters.delete("ashutohs")+"<br>"); //delete the text
+
+        
+
+
+
+
+
+        document.write(letters.has("aditi")+"<br>"); //returns if the values true is tehre in a set or not
+       
+        //foreach i sued to iterate over on eanother from the given set 
+       letters.forEach(function(value)
+        {
+            document.write(value+"<br>")
+        });
+       
+    </script>
+</body>
+</html>

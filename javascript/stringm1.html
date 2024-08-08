@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x="ashutosh";
+        document.write(x.length+"<br>"); //returns the length of the string
+
+        document.write(x.slice(1,6)+"<br>");
+
+        document.write(x.slice(2)+"<br>")
+
+        function my()
+        {
+            let str="abc,efg,hij,klm";
+            document.write(str.slice(-7,-3)+"<br>");
+        }
+        my();
+
+        function m()
+        {
+            let sub="ashutosh ,vijaykumar ,patil"
+            document.write(sub.substring(5,8)+"<br>")
+        }
+        m();
+
+        function m1()
+        {
+            let sub="ashutosh ,vijaykumar ,patil"
+            document.write(sub.substr(2,9)+"<br>")
+        }
+        m1();
+
+
+        function m2()
+        {
+            let sub="please viti it again";
+            document.write(sub.replace("viti","W3Schools")+"<br>");
+        }
+        m2();
+
+        function m3()
+        {
+            let sub="ashutosh ,vijaykumar ,patil"
+            document.write(sub.toUpperCase()+"<br>")
+        }
+        m3();
+
+        function m4()
+        {
+            let sub="ASHUTOSH ,VIJAYKUMAR ,PATIL"
+            document.write(sub.toLowerCase()+"<br>")
+        }
+        m4();
+
+        function m5()
+        {
+            let sub="ashutosh";
+            let sup="belong";
+            document.write(sub.concat(" "+sup)+"<br>")
+        }
+        m5();
+
+        function m6()
+        {
+            let sub="ashutosh             ,vijaykumar            ,patil"
+            document.write(sub.trim()+"<br>")
+        }
+        m6();
+
+        function m6()
+        {
+            let sub="           ashutosh             ,vijaykumar            ,patil"
+            document.write(sub.trimStart()+"<br>")
+        }
+        m6();
+
+        function m7()
+        {
+            let sub="5";
+            document.write(sub.padStart(30,"1")+"<br>")
+        }
+        m7();
+
+        function m8()
+        {
+            let sub="5";
+            document.write(sub.padEnd(3,"1")+"<br>")
+        }
+        m8();
+
+        function m9()
+        {
+            let sub="5";
+            let sup=sub.toString();
+            document.write(sub.padStart(3,"100")+"<br>")
+        }
+        m9();
+
+        function m10()
+        {
+            let sub="ashutish";
+           
+            document.write(sub.charCodeAt(3)+"<br>")
+            document.write(sub.charAt(3)+"<br>")
+            document.write(sub[5]+"<br>")
+        }
+        m10();
+    </script>
+</body>
+</html>

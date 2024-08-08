@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    h1{
+        padding: 20px;
+        background-color: yellow;
+        color: red;
+    }
+</style>
+<body>
+
+    <h1>Hii my name is ashutosh</h1>
+    <h1 class="c1">My way to lve the life</h1>
+    <h1 id="d1">My own way</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <button>Hide</button>
+    <script>
+        $(document).ready(function()
+        {
+            $('button').click(function()
+            {
+                $("h1").hide();
+            });
+        });
+    </script>
+
+
+</body>
+</html>
