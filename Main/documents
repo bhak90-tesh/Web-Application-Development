@@ -1,0 +1,24 @@
+# //Command to run API:
+# 1.	Invoke-RestMethod -Uri "http://localhost:5000/api/insertSongs" -Method POST //imp 
+# 2.	Invoke-RestMethod -Uri "http://localhost:5000/api/totalSongs" -Method GET
+# 3.	Invoke-RestMethod -Uri "http://localhost:5000/api/listSongs" -Method GET
+# 4.	Invoke-RestMethod -Uri "http://localhost:5000/api/directorSongs/MD2" -Method GET
+# 5.	Invoke-RestMethod -Uri "http://localhost:5000/api/directorSongs/MD2/Singer4" -Method GET
+# 6.	Invoke-RestMethod -Uri "http://localhost:5000/api/deleteSong/662e0dceafbaa9278941ad57" -Method DELETE
+
+# 7.Invoke-RestMethod -Uri "http://localhost:5000/api/addFavouriteSong" -Method POST -ContentType "application/json" -Body '{
+# "Songname": "YourSongName",
+# "Film": "YourFilm",
+# "Music_director": "YourMusicDirector",
+# "singer": "YourSinger",
+# "Actor": "YourActor",
+# "Actress": "YourActress"
+# }'
+# 8.Invoke-RestMethod -Uri "http://localhost:5000/api/singerSongs/Film5/Singer4" -Method GET
+# 9.Invoke-RestMethod -Uri "http://localhost:5000/api/updateSong/662e0dceafbaa9278941ad56" -Method PUT -ContentType "application/json" -Body '{
+#                 "Actor": "YourActor1",
+#                  "Actress": "YourActress1"
+# }'
+# Upadated..........
+# 10.Invoke-RestMethod -Uri "http://localhost:5000/api/songsTable" -Method GET
+
